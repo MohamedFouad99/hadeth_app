@@ -11,15 +11,19 @@ abstract class TextApp {
     "ألاربعون النوويه",
     textDirection: TextDirection.rtl,
     style: TextStyle(
-        color: Colors.black, fontWeight: FontWeight.bold, fontSize: 30),
+        color: Colors.black, fontWeight: FontWeight.bold, fontSize: 25),
   );
   static const Text headerHomeScreen = const Text(
     "لحفظ وسماع الاحاديث النوويه",
     style: TextStyle(
-        color: Colors.green, fontWeight: FontWeight.bold, fontSize: 30),
+        color: Colors.green, fontWeight: FontWeight.bold, fontSize: 29),
   );
 
-  static const Text bookOneScreen = const Text("ألأحاديث الاربعون");
+  static const Text bookOneScreen = const Text(
+    "ألأحاديث الاربعون",
+    style: TextStyle(
+        color: Colors.green, fontWeight: FontWeight.bold, fontSize: 29),
+  );
   static const Text bookTwoScreen = const Text("ألأستماع للأحاديث");
   static const Text bookThreeScreen = const Text("ألأحاديث المحفوظه");
 }

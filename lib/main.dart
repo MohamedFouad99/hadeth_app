@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hadeth_app/screens/hadeth_screen.dart';
 import 'package:hadeth_app/screens/splash_screen.dart';
 
 void main() {

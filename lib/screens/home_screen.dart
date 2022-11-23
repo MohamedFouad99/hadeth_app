@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:hadeth_app/screens/hadeth_screen.dart';
 import 'package:hadeth_app/utils/color_app.dart';
 
 import '../utils/text.dart';
@@ -69,7 +70,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   TextApp.headerHomeScreen,
                   GestureDetector(
                       onTap: () {
-                        //Navigator.of(context).push(MaterialPageRoute(builder: (context){}));
+                        Navigator.of(context)
+                            .push(MaterialPageRoute(builder: (context) {
+                          return HadethScreen();
+                        }));
                       },
                       child: myCard(
                           colorApp.green1,
