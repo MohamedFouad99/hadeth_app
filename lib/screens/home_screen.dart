@@ -6,6 +6,7 @@ import 'package:hadeth_app/screens/hadeth_screen.dart';
 import 'package:hadeth_app/utils/color_app.dart';
 
 import '../utils/text.dart';
+import 'audio_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -83,7 +84,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           'assets/svg/one.svg')),
                   InkWell(
                       onTap: () {
-                        // Navigator.of(context).push(MaterialPageRoute(builder: (context)=>AudioAhadithScreen()));
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => AudioScreen()));
                       },
                       child: myCard(
                           colorApp.yellow1,

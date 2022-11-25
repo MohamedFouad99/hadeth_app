@@ -6,12 +6,12 @@ import 'package:hadeth_app/utils/color_app.dart';
 import 'package:hadeth_app/utils/text.dart';
 import 'package:path_provider/path_provider.dart';
 
-class HadethScreen extends StatefulWidget {
+class AudioScreen extends StatefulWidget {
   @override
-  State<HadethScreen> createState() => _HadethScreenState();
+  State<AudioScreen> createState() => _AudioScreenState();
 }
 
-class _HadethScreenState extends State<HadethScreen> {
+class _AudioScreenState extends State<AudioScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,24 +45,12 @@ class _HadethScreenState extends State<HadethScreen> {
                               Icons.arrow_forward,
                               size: 25,
                             )),
-                        // InkWell(
-                        //   onTap: (() => Navigator.pop(context)),
-                        // child: Padding(
-                        //   padding: EdgeInsets.only(left: 12),
-                        //   child: Transform.rotate(
-                        //     angle: 9.43,
-                        //     child: SvgPicture.asset(
-                        //       "assets/svg/arrow-right.svg",
-                        //     ),
-                        //   ),
-                        // ),
-                        //),
                       ],
                     ),
                     SizedBox(
                       height: 16,
                     ),
-                    TextApp.bookOneScreen,
+                    TextApp.bookTwoScreen,
                   ],
                 ),
               ),
@@ -75,8 +63,6 @@ class _HadethScreenState extends State<HadethScreen> {
                     //   fit: BoxFit.fill,
                     // ),
                     FutureBuilder(
-
-                        //we call the method, which is in the folder db file database.dart
                         future: Mydata.getAlldata(),
                         builder:
                             (BuildContext context, AsyncSnapshot snapshot) {

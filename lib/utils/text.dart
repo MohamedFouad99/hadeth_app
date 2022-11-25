@@ -24,6 +24,10 @@ abstract class TextApp {
     style: TextStyle(
         color: Colors.green, fontWeight: FontWeight.bold, fontSize: 29),
   );
-  static const Text bookTwoScreen = const Text("ألأستماع للأحاديث");
+  static const Text bookTwoScreen = const Text(
+    "ألأستماع للأحاديث",
+    style: TextStyle(
+        color: Colors.green, fontWeight: FontWeight.bold, fontSize: 29),
+  );
   static const Text bookThreeScreen = const Text("ألأحاديث المحفوظه");
 }
