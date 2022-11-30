@@ -23,24 +23,43 @@ class _NetworkingPageContentState extends State<NetworkingPageContent> {
                 height: 50,
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(""),
-                  SvgPicture.asset("assets/svg/logo.svg"),
-                  SvgPicture.asset("assets/svg/arrow-right.svg"),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * .14,
+                  ),
+                  SvgPicture.asset(
+                    "assets/svg/logo.svg",
+                  ),
+                  IconButton(
+                      onPressed: (() => Navigator.pop(context)),
+                      icon: Icon(
+                        Icons.arrow_forward,
+                        size: 25,
+                      )),
+                  // InkWell(
+                  //   onTap: (() => Navigator.pop(context)),
+                  // child: Padding(
+                  //   padding: EdgeInsets.only(left: 12),
+                  //   child: Transform.rotate(
+                  //     angle: 9.43,
+                  //     child: SvgPicture.asset(
+                  //       "assets/svg/arrow-right.svg",
+                  //     ),
+                  //   ),
+                  // ),
+                  //),
                 ],
               ),
-              Column(
-                //mainAxisAlignment: MainAxisAlignment.end,
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  TextApp.topHomeScreen,
-                  TextApp.headerHomeScreen,
-                ],
+              SizedBox(
+                height: 40,
               ),
             ],
           ),
-          _convertHadith(context, widget.data),
+          Padding(
+            padding: const EdgeInsets.all(18.0),
+            child: _convertHadith(context, widget.data),
+          ),
         ],
       ),
     );

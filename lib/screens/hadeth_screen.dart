@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hadeth_app/database/my_data.dart';
 import 'package:hadeth_app/model/hadeth.dart';
+import 'package:hadeth_app/screens/bottom_bar.dart';
 import 'package:hadeth_app/utils/color_app.dart';
 import 'package:hadeth_app/utils/text.dart';
 import 'package:path_provider/path_provider.dart';
@@ -87,7 +88,12 @@ class _HadethScreenState extends State<HadethScreen> {
                                 Hadith item = snapshot.data[index];
                                 //delete one register for id
                                 return GestureDetector(
-                                    onTap: () {},
+                                    onTap: () {
+                                      Navigator.of(context).push(
+                                          MaterialPageRoute(
+                                              builder: ((context) =>
+                                                  HomeHadith(hadith: item))));
+                                    },
                                     child:
                                         hadethImage(item.key, item.nameHadith));
                               },
