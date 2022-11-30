@@ -20,7 +20,7 @@ abstract class TextApp {
   );
 
   static const Text bookOneScreen = const Text(
-    "ألأحاديث الاربعون",
+    "الأحاديث الاربعون",
     style: TextStyle(
         color: Colors.green, fontWeight: FontWeight.bold, fontSize: 29),
   );
